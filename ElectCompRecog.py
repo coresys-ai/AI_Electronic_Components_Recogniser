@@ -64,7 +64,7 @@ def imageInput(src):
 
 def main():
     
-    st.image("logo.JPG", width = 500)
+    st.image("logo.BMP", width = 500)
     st.title("Coresys Limited")
     st.header("AI Tool for Electronic Component Recognition")
     st.header("👈🏽 Select the Image Source options")
