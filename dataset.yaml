@@ -1,0 +1,10 @@
+# train and val data
+train: ../Elect_Comp_dataset/images/train
+val: ../Elect_Comp_dataset/images/val
+
+# number of classes
+nc: 9
+
+# class names
+names: ['Capacitor', 'Electrolytic Capacitor' ,'IC', 'LED', 'POT', 'PUSH' ,'Resistor', 'Transistor', 'Ultrasonic Sensor']
+
