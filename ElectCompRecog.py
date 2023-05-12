@@ -62,6 +62,7 @@ def imageInput(src):
                     img_ = Image.open(os.path.join('data/outputs', os.path.basename(image_file)))
                     st.image(img_, caption='AI Electronic Component Predictions')
 
+                    
 def main():
     
     st.image("logo.JPG", width = 500)
