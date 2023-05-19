@@ -24,7 +24,7 @@ def imageInput(src):
             outputpath = os.path.join('data/outputs', os.path.basename(imgpath))
             with open(imgpath, mode="wb") as f:
                 f.write(image_file.getbuffer())
-
+                
             #call Model prediction--
             model = torch.hub.load('ultralytics/yolov5', 'custom', path='ecomp_1st/weights/best.pt', force_reload=True)  
             #model.cuda() if device == 'cuda' else model.cpu()
@@ -35,7 +35,6 @@ def imageInput(src):
                 im_base64.save(outputpath)
 
             #--Display predicton
-            
             img_ = Image.open(outputpath)
             with col2:
                 st.image(img_, caption='AI Electronic Component Recogniser', use_column_width=True)
@@ -53,7 +52,7 @@ def imageInput(src):
         with col2:            
             if image_file is not None and submit:
                 #call Model prediction--
-                model = torch.hub.load('ultralytics/yolov5','custom', path='ecomp_1st/weights/best.pt', force_reload=True) 
+                model = torch.hub.load('ultralytics/yolov5','custom',path='ecomp_1st/weights/best.pt', force_reload=True) 
                 pred = model(image_file)
                 pred.render()  # render bbox in image
                 for im in pred.ims:
