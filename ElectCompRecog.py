@@ -53,7 +53,7 @@ def imageInput(src):
         with col2:            
             if image_file is not None and submit:
                 #call Model prediction--
-                model = torch.hub.load('ultralytics/yolov5','custom', path= 'ecomp_1st/weights/best.pt', force_reload=True) 
+                model = torch.hub.load('ultralytics/yolov5','custom', path='ecomp_1st/weights/best.pt', force_reload=True) 
                 pred = model(image_file)
                 pred.render()  # render bbox in image
                 for im in pred.ims:
