@@ -42,7 +42,7 @@ def imageInput(src):
 
     elif src == 'From test Images': 
         # Image selector slider
-        imgpath = glob.glob('data/images/*')
+        imgpath = glob.glob('images/*')
         imgsel = st.slider('Select random images from test set.', min_value=1, max_value=len(imgpath), step=1) 
         image_file = imgpath[imgsel-1]
         submit = st.button("Predict Electronic Component Name!")
